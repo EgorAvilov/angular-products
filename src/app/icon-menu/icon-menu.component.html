@@ -1,0 +1,22 @@
+<div>
+  <button
+    class="btn btn-secondary"
+    type="button"
+    (click)="openMenu()">
+    <i [ngClass]="getIconClass(chosenIcon)">
+    </i>
+  </button>
+</div>
+<div
+  *ngIf="isMenuShown"
+  class="icon-menu">
+  <div *ngFor="let iconName of getIconList(chosenIcon)"
+       class="menu-element">
+    <button
+      class="btn btn-secondary"
+      type="button"
+      (click)="changeChosen(iconName)">
+      <i [ngClass]="getIconClass(iconName)"></i>
+    </button>
+  </div>
+</div>

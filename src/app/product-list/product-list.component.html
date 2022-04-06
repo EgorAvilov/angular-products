@@ -1,0 +1,47 @@
+<div class="product-list-panel">
+  <h4>Product list</h4>
+  <div *ngIf="!isLoading; else loading">
+    <ul *ngIf="productItems.length; else noProducts">
+      <li *ngFor="let productItem of productItems">
+        <div class="product">
+          <div class="content">{{productItem.name}}</div>
+          <div class="btn-group controls-right"
+               role="group"
+               aria-label="Basic example">
+            <button type="button"
+                    class="btn btn-secondary"
+                    (click)="remove(productItem)">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+            <button type="button"
+                    class="btn btn-secondary"
+                    [routerLink]="['/details', productItem.id]">
+              <i class="bi bi-info-circle-fill"></i>
+            </button>
+          </div>
+          <div class="product-icon">
+            <i [ngClass]="getIconClass(productItem.iconName)"></i>
+          </div>
+          <app-counter-buttons [initialCount]="productItem.amount"
+                               (newItemEvent)="changeAmount(productItem.id, $event)">
+          </app-counter-buttons>
+          <div class="content">Total: {{productItem.amount * productItem.price}}
+          </div>
+        </div>
+      </li>
+      <div class="total-count">
+        Total: {{total}}
+      </div>
+    </ul>
+    <ng-template #noProducts>
+      <p class="text-center">
+        No products</p>
+    </ng-template>
+  </div>
+  <ng-template #loading>
+    <div class="spinner-border"
+         role="status">
+      <span class="visually-hidden"></span>
+    </div>
+  </ng-template>
+</div>
