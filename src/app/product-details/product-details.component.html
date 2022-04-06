@@ -1,0 +1,12 @@
+<div class="product-details">
+  <h4 class="content">{{productItem.name}}</h4>
+  <div class="details-element">
+    <div class="product-icon">
+      <i [ngClass]="getIconClass(productItem.iconName)"></i>
+    </div>
+    <div class="content">Count: {{productItem.amount}}</div>
+    <div class="content">Price: {{productItem.price}}</div>
+    <div class="content">Total: {{productItem.amount * productItem.price}}</div>
+    <button class="btn btn-secondary" [routerLink]="['/']">Back to list</button>
+  </div>
+</div>

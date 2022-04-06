@@ -1,0 +1,14 @@
+<div class="counter">
+  <button
+    class="counter-element btn btn-secondary"
+    type="button"
+    [disabled]=disabled()
+    (click)="onChange(-1)">-
+  </button>
+  <label class="counter-element">{{value}}</label>
+  <button
+    class="counter-element btn btn-secondary"
+    type="button"
+    (click)="onChange(1)">+
+  </button>
+</div>

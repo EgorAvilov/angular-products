@@ -1,0 +1,9 @@
+
+.parent > div {
+  float: left;
+  width: 45%;
+  margin: 2%;
+}
+.parent{
+  background-color: yellow;
+}

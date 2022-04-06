@@ -1,0 +1,9 @@
+.counter {
+  margin: auto;
+  width: 60%;
+}
+
+.counter-element {
+  width: 7%;
+  min-width: 40px;
+}

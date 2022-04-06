@@ -1,0 +1,38 @@
+.product-list-panel {
+  align-content: center;
+  text-align: center;
+  min-width: 500px;
+  margin-top: 50px;
+}
+
+.product {
+  background-color: rgba(177, 189, 197, 0.67);
+  border-radius: 5px;
+  position: relative;
+  padding: 5px;
+  margin: 15px;
+}
+
+.controls-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 15px;
+}
+
+.product-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 10px;
+  font-size: 50px;
+}
+
+svg.product-icon {
+  width: 60px;
+  height: 60px;
+}
+.total-count{
+  text-align: left;
+  margin: 15px;
+}
